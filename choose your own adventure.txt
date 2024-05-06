@@ -1,0 +1,35 @@
+#choose your own adventure 
+
+name=input("Type your name: ").capitalize()
+print("Welcome",name,"to this adventure!.")
+
+answer=input("you are on a dirt road, it has come to an end and you can go left or right. Which way would you go? ").lower()
+
+if answer=="left":
+   answer=input("You come to a river, you can walk around it or swim across it. Type walk to walk around it and swim to swim across it: \n").lower()
+   if answer=="swim":
+       print("You swam across and were saw an alligator enjoying sun at a distance.")
+       answer=input("Would you still swim towards alligator or return back to the shore? type swim back to move towards shore and move to move towards alligator (swim back\move).").lower()
+       if answer=="swim back":
+           print("You are saved but you see there is no any roads around that place except for the straight lane.")
+       else:
+           print("You are slowly moving towards alligator. It got your sense and you are dead.You loose.")
+           
+       
+      
+   elif answer=="walk":
+        print("You walked for some miles and saw the snake in your lane.")
+        answer=input("Would you like to move towards it or return back to the roadside? Type yes if you like to move forward and no if you want to return back to roadside. ").lower()
+        if answer=="yes":
+            print("You are moving ahead and oops you are bitten by the poisonous snake. Lost it",name,".")
+        else:
+            print("you are returning back to road and are followed by the snake continuously....... but ypu managed to run far and are saved. Congratulation ypu won :) ")
+            
+       
+
+    
+    
+else:
+    print("Not a valid option.You loose.")
+    
+print("Thank You For Playing :)")
